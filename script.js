@@ -50,13 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
   langToggle.addEventListener("click", () => {
     langToggle.classList.toggle("en");
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
   const roadmapItems = document.querySelectorAll(".roadmap-item");
-
   const observerOptions = {
-    threshold: 0.2
+    threshold: 0.15
   };
 
   const roadmapObserver = new IntersectionObserver((entries, observer) => {
