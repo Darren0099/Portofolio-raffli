@@ -5,6 +5,10 @@
   font-family: 'Poppins', sans-serif, system-ui;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F5EBDD;
   color: #2D4A3E;
