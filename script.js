@@ -38,17 +38,49 @@ function typeEffect() {
 document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 
-  const navItems = document.querySelectorAll(".nav-item");
-  navItems.forEach(item => {
-    item.addEventListener("click", function () {
-      navItems.forEach(nav => nav.classList.remove("active"));
-      this.classList.add("active");
+  const langToggle = document.getElementById("langToggle");
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      langToggle.classList.toggle("en");
+    });
+  }
+
+  const navLinks = document.querySelectorAll(".nav-item");
+  
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
     });
   });
 
-  const langToggle = document.getElementById("langToggle");
-  langToggle.addEventListener("click", () => {
-    langToggle.classList.toggle("en");
+  const sections = document.querySelectorAll("section[id]");
+
+  window.addEventListener("scroll", () => {
+    let currentScroll = window.scrollY;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+        navLinks.forEach(item => {
+          item.classList.remove("active");
+          if (item.getAttribute("href") === "#" + sectionId) {
+            item.classList.add("active");
+          }
+        });
+      }
+    });
   });
 
   const roadmapItems = document.querySelectorAll(".roadmap-item");
