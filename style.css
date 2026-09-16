@@ -441,40 +441,16 @@ body {
 }
 
 @keyframes scrollTicker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@media (max-width: 900px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-image-wrapper {
-    margin-top: 40px;
-    width: 100%;
-  }
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-/* SECTION STYLING */
 .skills-section {
   padding: 90px 8%;
   background-color: #F5EBDD;
   color: #2D4A3E;
 }
 
-/* ATAS: HEADER RATA TENGAH */
 .skills-header {
   text-align: center;
   max-width: 720px;
@@ -500,7 +476,6 @@ body {
   color: #2D4A3E;
 }
 
-/* STATISTIK RATA TENGAH */
 .skills-stats {
   display: inline-flex;
   align-items: center;
@@ -537,7 +512,6 @@ body {
   background-color: rgba(45, 74, 62, 0.2);
 }
 
-/* BAWAH: GRID 3 KARTU BERJAJAR */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -556,7 +530,6 @@ body {
   opacity: 0;
 }
 
-/* STAGGERED ANIMATION (MUNCUL BERURUTAN) */
 .card-left { animation-delay: 0.2s; }
 .card-center { animation-delay: 0.4s; }
 .card-right { animation-delay: 0.6s; }
@@ -618,7 +591,6 @@ body {
 .text-orange { color: #F2765E; }
 .text-green { color: #2D4A3E; }
 
-/* ANIMASI KEYFRAMES MUNCUL PERLAHAN */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -627,15 +599,6 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* RESPONSIVE LAYOUT UNTUK TABLET & HP */
-@media (max-width: 992px) {
-  .skills-grid {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 500px;
-    margin: 0 auto;
   }
 }
 
@@ -665,7 +628,6 @@ body {
   line-height: 1.6;
 }
 
-/* ROADMAP CONTAINER & LINE */
 .roadmap-container {
   position: relative;
   max-width: 900px;
@@ -678,7 +640,6 @@ body {
   bottom: 0;
   left: 50%;
   width: 3px;
-  background: dashed;
   border-left: 2px dashed rgba(45, 74, 62, 0.3);
   transform: translateX(-50%);
 }
@@ -707,7 +668,6 @@ body {
   padding-left: 40px;
 }
 
-/* ROADMAP DOT */
 .roadmap-dot {
   position: absolute;
   top: 20px;
@@ -733,7 +693,6 @@ body {
   box-shadow: 0 0 0 4px rgba(242, 118, 94, 0.3);
 }
 
-/* CARD STYLING */
 .roadmap-card {
   background: #ffffff;
   padding: 22px 24px;
@@ -801,8 +760,30 @@ body {
   line-height: 1.5;
 }
 
-/* RESPONSIVE LAYOUT UNTUK HP */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-image-wrapper {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
   .roadmap-line {
     left: 20px;
   }
