@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome untuk icon (opsional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR / HEADER NAVIGATION -->
+  <header class="navbar">
+    <div class="logo">
+      <h2>Portofolio</h2>
+    </div>
+    <nav class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#projects">Projects</a>
+      <a href="#askme">Ask Me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="profile">
+    <!-- TEKS / SISI KIRI -->
+    <div class="hero-content">
+      <div class="greeting-badge">
+        <span>Hello There!</span>
+      </div>
+      
+      <h1 class="hero-title">
+        I'm <span class="highlight">Nama Kamu</span>,<br />
+        Frontend Developer<br />
+        Based in Indonesia.
+      </h1>
+
+      <p class="hero-description">
+        Frontend Developer dengan latar belakang Graphic Design, Data Analysis, dan HR. Siap membangun web yang interaktif, fungsional, dan visual yang menarik.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          View My Portfolio
+          <span class="play-icon"><i class="fa-solid fa-play"></i></span>
+        </a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+    </div>
+
+    <!-- FOTO & GRAPHICS / SISI KANAN -->
+    <div class="hero-image-wrapper">
+      <!-- Shape Kuning di Belakang -->
+      <div class="yellow-shape"></div>
+
+      <!-- Badge Bulat Hire Me -->
+      <div class="hire-badge">
+        <svg viewBox="0 0 100 100" width="90" height="90">
+          <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+          <text font-size="11.5" fill="#ffffff" font-weight="bold" letter-spacing="2">
+            <textPath href="#circlePath">
+              • HIRE ME • HIRE ME • HIRE ME
+            </textPath>
+          </text>
+        </svg>
+        <div class="badge-center-icon">✕</div>
+      </div>
+
+      <!-- Foto Utama -->
+      <!-- Ganti 'foto-kamu.png' dengan file foto tanpa background milikmu -->
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Foto Profile" class="profile-img" />
+
+      <!-- Tag Floating Badge Skills -->
+      <div class="tag-badge tag-frontend">
+        <i class="fa-solid fa-code"></i> Frontend Dev
+      </div>
+      <div class="tag-badge tag-design">
+        <i class="fa-solid fa-palette"></i> Graphic Design
+      </div>
+      <div class="tag-badge tag-data">
+        <i class="fa-solid fa-chart-simple"></i> Data Analysis
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE / BANNER JALAN DI BAWAH HERO -->
+  <div class="ticker-banner">
+    <div class="ticker-content">
+      <span>Frontend Development</span> <span class="star">★</span>
+      <span>UI/UX Design</span> <span class="star">★</span>
+      <span>Data Analytics</span> <span class="star">★</span>
+      <span>HR & Management</span> <span class="star">★</span>
+      <span>React JS</span> <span class="star">★</span>
+      <span>Website Design</span> <span class="star">★</span>
+    </div>
+  </div>
+
+</body>
+</html>
