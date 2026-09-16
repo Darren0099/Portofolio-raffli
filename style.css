@@ -467,48 +467,114 @@ body {
   }
 }
 
-.stack-section {
+/* SECTION STYLING */
+.skills-section {
   padding: 90px 8%;
   background-color: #F5EBDD;
+  color: #2D4A3E;
 }
 
-.stack-container {
-  display: flex;
-  gap: 50px;
+/* ATAS: HEADER RATA TENGAH */
+.skills-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px auto;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.skills-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #2D4A3E;
+  margin-bottom: 18px;
+}
+
+.skills-desc {
+  font-size: 15px;
+  color: #556B60;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.skills-desc strong {
+  color: #2D4A3E;
+}
+
+/* STATISTIK RATA TENGAH */
+.skills-stats {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(45, 74, 62, 0.15);
 }
 
-.stack-left {
-  flex: 1;
+.stat-box {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 540px;
+  align-items: center;
 }
 
-.stack-card {
+.stat-num {
+  font-size: 42px;
+  font-weight: 800;
+  color: #2D4A3E;
+  line-height: 1;
+}
+
+.stat-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: #556B60;
+  margin-top: 6px;
+}
+
+.stat-line {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(45, 74, 62, 0.2);
+}
+
+/* BAWAH: GRID 3 KARTU BERJAJAR */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.skill-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 24px;
+  padding: 28px 24px;
   border: 1px solid rgba(45, 74, 62, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.35s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
 }
 
-.stack-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+/* STAGGERED ANIMATION (MUNCUL BERURUTAN) */
+.card-left { animation-delay: 0.2s; }
+.card-center { animation-delay: 0.4s; }
+.card-right { animation-delay: 0.6s; }
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: rgba(242, 118, 94, 0.3);
 }
 
-.card-header {
+.card-top {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-.icon-box {
+.icon-circle {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -517,38 +583,31 @@ body {
   justify-content: center;
   color: #ffffff;
   font-size: 18px;
+  flex-shrink: 0;
 }
 
-.icon-web {
-  background-color: #2D4A3E;
-}
+.icon-web { background-color: #2D4A3E; }
+.icon-data { background-color: #F2765E; }
+.icon-design { background-color: #e59819; }
 
-.icon-data {
-  background-color: #F2765E;
-}
-
-.icon-design {
-  background-color: #e59819;
-}
-
-.card-header h3 {
+.card-top h3 {
   font-size: 18px;
   font-weight: 700;
   color: #2D4A3E;
 }
 
-.badge-group {
+.badge-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
-.tech-badge {
+.badge-item {
   background-color: #F5EBDD;
   color: #2D4A3E;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  padding: 6px 14px;
+  padding: 6px 13px;
   border-radius: 20px;
   display: inline-flex;
   align-items: center;
@@ -556,81 +615,26 @@ body {
   border: 1px solid rgba(45, 74, 62, 0.1);
 }
 
-.tech-badge i {
-  color: #F2765E;
-}
+.text-orange { color: #F2765E; }
+.text-green { color: #2D4A3E; }
 
-.stack-right {
-  flex: 1;
-  max-width: 480px;
-}
-
-.section-title {
-  font-size: 40px;
-  font-weight: 800;
-  color: #2D4A3E;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.section-desc {
-  font-size: 15px;
-  color: #556B60;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.section-desc strong {
-  color: #2D4A3E;
-}
-
-.stats-group {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin-top: 35px;
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-number {
-  font-size: 46px;
-  font-weight: 800;
-  color: #2D4A3E;
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 14px;
-  color: #556B60;
-  font-weight: 500;
-  margin-top: 6px;
-}
-
-.stat-divider {
-  width: 1px;
-  height: 50px;
-  background-color: rgba(45, 74, 62, 0.2);
-}
-
-@media (max-width: 900px) {
-  .stack-container {
-    flex-direction: column-reverse;
-    text-align: center;
+/* ANIMASI KEYFRAMES MUNCUL PERLAHAN */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
   }
-  .stack-left, .stack-right {
-    max-width: 100%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .card-header {
-    justify-content: center;
-  }
-  .badge-group {
-    justify-content: center;
-  }
-  .stats-group {
-    justify-content: center;
+}
+
+/* RESPONSIVE LAYOUT UNTUK TABLET & HP */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
