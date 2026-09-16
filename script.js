@@ -51,3 +51,24 @@ document.addEventListener("DOMContentLoaded", () => {
     langToggle.classList.toggle("en");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const roadmapItems = document.querySelectorAll(".roadmap-item");
+
+  const observerOptions = {
+    threshold: 0.2
+  };
+
+  const roadmapObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  roadmapItems.forEach(item => {
+    roadmapObserver.observe(item);
+  });
+});
