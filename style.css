@@ -1,0 +1,281 @@
+/* RESET & BASIC STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif, system-ui;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background-color: #f7f7f7;
+}
+
+.logo h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.nav-links a {
+  margin-left: 35px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e59819;
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 8% 80px 8%;
+  min-height: 80vh;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* GREETING BADGE */
+.greeting-badge {
+  display: inline-block;
+  border: 1.5px dashed #333;
+  padding: 6px 16px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.greeting-badge span {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* TITLES */
+.hero-title {
+  font-size: 46px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.hero-title .highlight {
+  color: #e59819;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.hero-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2b3b2b; /* Hijau tua elegan */
+  color: #fff;
+  border: 2px solid #2b3b2b;
+}
+
+.btn-primary .play-icon {
+  background-color: #e59819;
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.btn-outline {
+  border: 1.5px solid #333;
+  color: #1a1a1a;
+  background: transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* HERO IMAGE AREA */
+.hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 500px;
+  height: 480px;
+}
+
+/* YELLOW BACKGROUND SHAPE */
+.yellow-shape {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background-color: #e59819;
+  border-radius: 50% 50% 40% 60% / 50% 40% 60% 50%;
+  top: 40px;
+  z-index: 1;
+}
+
+.profile-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-height: 460px;
+  object-fit: contain;
+}
+
+/* HIRE ME ROTATING BADGE */
+.hire-badge {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  z-index: 3;
+  width: 90px;
+  height: 90px;
+  background-color: #2b3b2b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 12s linear infinite;
+}
+
+.badge-center-icon {
+  position: absolute;
+  color: #e59819;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* FLOATING TAG BADGES */
+.tag-badge {
+  position: absolute;
+  z-index: 3;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.tag-frontend {
+  background-color: #2b3b2b;
+  color: #fff;
+  bottom: 80px;
+  left: -20px;
+}
+
+.tag-design {
+  background-color: #e59819;
+  color: #1a1a1a;
+  bottom: 140px;
+  right: -10px;
+}
+
+.tag-data {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  top: 100px;
+  left: -30px;
+}
+
+/* BOTTOM TICKER BANNER */
+.ticker-banner {
+  background-color: #e59819;
+  padding: 18px 0;
+  transform: rotate(-1deg);
+  width: 105%;
+  margin-left: -2.5%;
+  overflow: hidden;
+  border-top: 3px solid #2b3b2b;
+  border-bottom: 3px solid #2b3b2b;
+}
+
+.ticker-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.ticker-content .star {
+  font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN (Untuk Layar HP) */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    margin: 0 10px;
+  }
+}
