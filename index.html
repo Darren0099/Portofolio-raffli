@@ -3,47 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio - Al-man Raffli Saputra</title>
+  <title>Al-man Raffli Saputra - Portofolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome untuk icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
-  <!-- NAVBAR / HEADER NAVIGATION -->
   <header class="navbar">
     <div class="logo">
       <h2>Raffli</h2>
     </div>
-    <nav class="nav-links">
-      <a href="#profile">Profile</a>
-      <a href="#projects">Projects</a>
-      <a href="#askme">Ask Me</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+    <div class="nav-wrapper">
+      <nav class="nav-links">
+        <a href="#profile" class="nav-item active">
+          <span class="dot"></span> Profile
+        </a>
+        <a href="#projects" class="nav-item">
+          <span class="dot"></span> Projects
+        </a>
+        <a href="#askme" class="nav-item">
+          <span class="dot"></span> Ask Me
+        </a>
+        <a href="#contact" class="nav-item">
+          <span class="dot"></span> Contact
+        </a>
+      </nav>
+    </div>
+
     <div class="header-right">
-      <button class="lang-btn">EN/IN</button>
-      <a href="https://wa.me/6282183945815" class="phone-link" target="_blank">
-        <i class="fa-solid fa-phone"></i> 082183945815
+      <div class="lang-toggle" id="langToggle">
+        <div class="toggle-pill"></div>
+        <span class="lang-opt opt-en">EN</span>
+        <span class="lang-opt opt-id active">ID</span>
+      </div>
+      <a href="https://wa.me/6282183945815" class="phone-btn" target="_blank">
+        <i class="fa-solid fa-phone"></i>
       </a>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero-section" id="profile">
-    <!-- TEKS / SISI KIRI -->
     <div class="hero-content">
       <div class="greeting-badge">
         <span>Hello There!</span>
       </div>
       
       <h1 class="hero-title">
-        I'm <span class="highlight">Al-man Raffli Saputra</span>,<br />
-        Frontend Developer.
+        I'm <span class="highlight-name">Al-man Raffli Saputra</span>,<br />
+        <span class="dynamic-role" id="typewriter"></span><span class="cursor-blink">|</span>
       </h1>
 
       <p class="hero-description">
-        Frontend Developer dengan latar belakang Graphic Design, Data Analysis, dan HR. Siap membangun web yang interaktif, fungsional, dan visual yang menarik.
+        Menggabungkan keahlian pemrosesan data, perancangan visual intuitif, serta pengembangan antarmuka web modern yang responsif dan interaktif.
       </p>
 
       <div class="hero-buttons">
@@ -55,59 +67,74 @@
       </div>
     </div>
 
-    <!-- FOTO & GRAPHICS / SISI KANAN -->
     <div class="hero-image-wrapper">
-      <!-- Shape Kuning di Belakang -->
-      <div class="yellow-shape"></div>
-
-      <!-- Border Frame Sudut Foto -->
+      <div class="orange-shape"></div>
       <div class="photo-corner-border"></div>
 
-      <!-- Badge Bulat Floating (Unduh CV / Hire Me Style) -->
       <div class="hire-badge">
-        <svg viewBox="0 0 100 100" width="90" height="90">
-          <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
-          <text font-size="11.5" fill="#ffffff" font-weight="bold" letter-spacing="2">
+        <svg viewBox="0 0 100 100" width="100" height="100">
+          <path id="circlePath" fill="none" d="M 12, 50 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
+          <text font-size="9.5" fill="#ffffff" font-weight="bold" letter-spacing="1.8">
             <textPath href="#circlePath">
               • UNDUH CV • UNDUH CV • UNDUH CV
             </textPath>
           </text>
         </svg>
-        <div class="badge-center-icon"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="badge-center">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
       </div>
 
-      <!-- Foto Utama -->
       <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Al-man Raffli Saputra" class="profile-img" />
 
-      <!-- Floating Cursor Icon -->
-      <div class="floating-cursor">
-        <i class="fa-solid fa-arrow-pointer"></i>
+      <div class="tag-group tag-frontend">
+        <div class="pointer-cursor">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F2765E">
+            <path d="M3 3l7 18 3-7 7-3L3 3z"/>
+          </svg>
+        </div>
+        <div class="tag-pill">Frontend Dev</div>
       </div>
 
-      <!-- Tag Floating Badge Skills -->
-      <div class="tag-badge tag-frontend">
-        <i class="fa-solid fa-code"></i> Frontend Dev
+      <div class="tag-group tag-design">
+        <div class="pointer-cursor">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#2D4A3E">
+            <path d="M3 3l7 18 3-7 7-3L3 3z"/>
+          </svg>
+        </div>
+        <div class="tag-pill">Graphic Design</div>
       </div>
-      <div class="tag-badge tag-design">
-        <i class="fa-solid fa-palette"></i> Graphic Design
+
+      <div class="tag-group tag-data">
+        <div class="pointer-cursor">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F2765E">
+            <path d="M3 3l7 18 3-7 7-3L3 3z"/>
+          </svg>
+        </div>
+        <div class="tag-pill">Data Analysis</div>
       </div>
-      <div class="tag-badge tag-data">
-        <i class="fa-solid fa-chart-simple"></i> Data Analysis
+
+      <div class="tag-group tag-hr">
+        <div class="pointer-cursor">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#2D4A3E">
+            <path d="M3 3l7 18 3-7 7-3L3 3z"/>
+          </svg>
+        </div>
+        <div class="tag-pill">Human Resource</div>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE BANNER -->
   <div class="ticker-banner">
     <div class="ticker-content">
       <span>Frontend Development</span> <span class="star">★</span>
-      <span>UI/UX Design</span> <span class="star">★</span>
-      <span>Data Analytics</span> <span class="star">★</span>
-      <span>HR & Management</span> <span class="star">★</span>
-      <span>React JS</span> <span class="star">★</span>
-      <span>Website Design</span> <span class="star">★</span>
+      <span>Graphic Design</span> <span class="star">★</span>
+      <span>Data Analysis</span> <span class="star">★</span>
+      <span>Human Resource</span> <span class="star">★</span>
+      <span>React JS / Next.js</span> <span class="star">★</span>
     </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
