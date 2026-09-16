@@ -376,6 +376,7 @@ body {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
 }
+
 .ticker-wrapper {
   position: relative;
   width: 100vw;
@@ -445,5 +446,23 @@ body {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-image-wrapper {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
   }
 }
