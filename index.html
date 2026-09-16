@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio Saya</title>
+  <title>Portofolio - Al-man Raffli Saputra</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome untuk icon (opsional) -->
+  <!-- Font Awesome untuk icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
@@ -13,7 +13,7 @@
   <!-- NAVBAR / HEADER NAVIGATION -->
   <header class="navbar">
     <div class="logo">
-      <h2>Portofolio</h2>
+      <h2>Raffli</h2>
     </div>
     <nav class="nav-links">
       <a href="#profile">Profile</a>
@@ -21,6 +21,12 @@
       <a href="#askme">Ask Me</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="header-right">
+      <button class="lang-btn">EN/IN</button>
+      <a href="https://wa.me/6282183945815" class="phone-link" target="_blank">
+        <i class="fa-solid fa-phone"></i> 082183945815
+      </a>
+    </div>
   </header>
 
   <!-- HERO SECTION -->
@@ -32,9 +38,8 @@
       </div>
       
       <h1 class="hero-title">
-        I'm <span class="highlight">Nama Kamu</span>,<br />
-        Frontend Developer<br />
-        Based in Indonesia.
+        I'm <span class="highlight">Al-man Raffli Saputra</span>,<br />
+        Frontend Developer.
       </h1>
 
       <p class="hero-description">
@@ -46,7 +51,7 @@
           View My Portfolio
           <span class="play-icon"><i class="fa-solid fa-play"></i></span>
         </a>
-        <a href="#contact" class="btn btn-outline">Hire Me</a>
+        <a href="#download-cv" class="btn btn-outline">Unduh CV</a>
       </div>
     </div>
 
@@ -55,22 +60,29 @@
       <!-- Shape Kuning di Belakang -->
       <div class="yellow-shape"></div>
 
-      <!-- Badge Bulat Hire Me -->
+      <!-- Border Frame Sudut Foto -->
+      <div class="photo-corner-border"></div>
+
+      <!-- Badge Bulat Floating (Unduh CV / Hire Me Style) -->
       <div class="hire-badge">
         <svg viewBox="0 0 100 100" width="90" height="90">
           <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
           <text font-size="11.5" fill="#ffffff" font-weight="bold" letter-spacing="2">
             <textPath href="#circlePath">
-              • HIRE ME • HIRE ME • HIRE ME
+              • UNDUH CV • UNDUH CV • UNDUH CV
             </textPath>
           </text>
         </svg>
-        <div class="badge-center-icon">✕</div>
+        <div class="badge-center-icon"><i class="fa-solid fa-arrow-down"></i></div>
       </div>
 
       <!-- Foto Utama -->
-      <!-- Ganti 'foto-kamu.png' dengan file foto tanpa background milikmu -->
-      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Foto Profile" class="profile-img" />
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Al-man Raffli Saputra" class="profile-img" />
+
+      <!-- Floating Cursor Icon -->
+      <div class="floating-cursor">
+        <i class="fa-solid fa-arrow-pointer"></i>
+      </div>
 
       <!-- Tag Floating Badge Skills -->
       <div class="tag-badge tag-frontend">
@@ -85,7 +97,7 @@
     </div>
   </section>
 
-  <!-- MARQUEE / BANNER JALAN DI BAWAH HERO -->
+  <!-- MARQUEE BANNER -->
   <div class="ticker-banner">
     <div class="ticker-content">
       <span>Frontend Development</span> <span class="star">★</span>
