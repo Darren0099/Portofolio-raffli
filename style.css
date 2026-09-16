@@ -638,3 +638,185 @@ body {
     margin: 0 auto;
   }
 }
+
+.experience-section {
+  padding: 90px 8%;
+  background-color: #F5EBDD;
+  color: #2D4A3E;
+  position: relative;
+}
+
+.exp-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px auto;
+}
+
+.exp-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #2D4A3E;
+  margin-bottom: 14px;
+}
+
+.exp-desc {
+  font-size: 15px;
+  color: #556B60;
+  line-height: 1.6;
+}
+
+/* ROADMAP CONTAINER & LINE */
+.roadmap-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.roadmap-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: dashed;
+  border-left: 2px dashed rgba(45, 74, 62, 0.3);
+  transform: translateX(-50%);
+}
+
+.roadmap-item {
+  position: relative;
+  margin-bottom: 35px;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.roadmap-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.roadmap-item.left {
+  left: 0;
+  padding-right: 40px;
+}
+
+.roadmap-item.right {
+  left: 50%;
+  padding-left: 40px;
+}
+
+/* ROADMAP DOT */
+.roadmap-dot {
+  position: absolute;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: #F5EBDD;
+  border: 3px solid #2D4A3E;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.roadmap-item.left .roadmap-dot {
+  right: -8px;
+}
+
+.roadmap-item.right .roadmap-dot {
+  left: -8px;
+}
+
+.active-dot {
+  background-color: #F2765E !important;
+  border-color: #2D4A3E !important;
+  box-shadow: 0 0 0 4px rgba(242, 118, 94, 0.3);
+}
+
+/* CARD STYLING */
+.roadmap-card {
+  background: #ffffff;
+  padding: 22px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(45, 74, 62, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.highlight-card {
+  border: 1.5px solid #F2765E;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-year {
+  font-size: 12px;
+  font-weight: 700;
+  color: #F2765E;
+}
+
+.role-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.badge-web { background: rgba(45, 74, 62, 0.1); color: #2D4A3E; }
+.badge-design { background: rgba(242, 118, 94, 0.1); color: #F2765E; }
+.badge-hr { background: rgba(229, 152, 25, 0.15); color: #b87405; }
+.badge-comp { background: rgba(45, 74, 62, 0.15); color: #2D4A3E; }
+.badge-speaker { background: rgba(242, 118, 94, 0.15); color: #F2765E; }
+.badge-edu { background: rgba(0, 0, 0, 0.05); color: #333; }
+
+.roadmap-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2D4A3E;
+  margin-bottom: 4px;
+}
+
+.roadmap-card h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #556B60;
+  margin-bottom: 10px;
+}
+
+.roadmap-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE LAYOUT UNTUK HP */
+@media (max-width: 768px) {
+  .roadmap-line {
+    left: 20px;
+  }
+  .roadmap-item {
+    width: 100%;
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+  }
+  .roadmap-item.left,
+  .roadmap-item.right {
+    left: 0;
+  }
+  .roadmap-item.left .roadmap-dot,
+  .roadmap-item.right .roadmap-dot {
+    left: 12px;
+  }
+}
