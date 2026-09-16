@@ -22,13 +22,13 @@ body {
 }
 
 .logo h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 .nav-links a {
-  margin-left: 35px;
+  margin: 0 15px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -37,6 +37,42 @@ body {
 }
 
 .nav-links a:hover {
+  color: #e59819;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1.5px solid #333;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lang-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.phone-link {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phone-link:hover {
   color: #e59819;
 }
 
@@ -62,7 +98,6 @@ body {
   padding: 6px 16px;
   border-radius: 4px;
   margin-bottom: 25px;
-  position: relative;
 }
 
 .greeting-badge span {
@@ -72,7 +107,7 @@ body {
 
 /* TITLES */
 .hero-title {
-  font-size: 46px;
+  font-size: 44px;
   line-height: 1.2;
   font-weight: 800;
   color: #1a1a1a;
@@ -112,7 +147,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #2b3b2b; /* Hijau tua elegan */
+  background-color: #2b3b2b;
   color: #fff;
   border: 2px solid #2b3b2b;
 }
@@ -150,6 +185,19 @@ body {
   height: 480px;
 }
 
+/* BORDER SUDUT DI AREA FOTO */
+.photo-corner-border {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  bottom: 10px;
+  border: 2px dashed #333;
+  border-radius: 20px;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* YELLOW BACKGROUND SHAPE */
 .yellow-shape {
   position: absolute;
@@ -169,7 +217,27 @@ body {
   object-fit: contain;
 }
 
-/* HIRE ME ROTATING BADGE */
+/* CURSOR ICON FLOATING ANIMATION */
+.floating-cursor {
+  position: absolute;
+  top: 75px;
+  left: -45px;
+  z-index: 4;
+  font-size: 26px;
+  color: #1a1a1a;
+  animation: floatUpDown 2.5s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0px) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-15deg);
+  }
+}
+
+/* UNDUH CV ROTATING BADGE */
 .hire-badge {
   position: absolute;
   top: 30px;
@@ -189,7 +257,6 @@ body {
   position: absolute;
   color: #e59819;
   font-size: 16px;
-  font-weight: bold;
 }
 
 @keyframes spin {
@@ -253,7 +320,7 @@ body {
   font-size: 14px;
 }
 
-/* RESPONSIVE DESIGN (Untuk Layar HP) */
+/* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column;
@@ -273,9 +340,5 @@ body {
   .navbar {
     flex-direction: column;
     gap: 15px;
-  }
-
-  .nav-links a {
-    margin: 0 10px;
   }
 }
